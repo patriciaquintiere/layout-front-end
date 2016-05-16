@@ -1350,6 +1350,7 @@ footer {
   margin-top: 90px;
   width: 700px;
   /** modal - lista de produtos */
+  /** modal - form */
   /** modal - form */ }
   .modal-dialog .modal-title {
     position: relative;
@@ -1523,6 +1524,54 @@ footer {
       display: inline-block;
       text-transform: uppercase;
       padding: 5px 10px; }
+  .modal-dialog .step3 .form-client__inside {
+    color: #5f5f5f;
+    max-width: 590px;
+    margin: 0 auto 10px;
+    flex-wrap: nowrap; }
+    .modal-dialog .step3 .form-client__inside h2 {
+      font-size: 35px;
+      margin: 10px 0; }
+    .modal-dialog .step3 .form-client__inside p {
+      font-size: 22px;
+      margin: 0; }
+      .modal-dialog .step3 .form-client__inside p.aviso {
+        color: #7e7e7e;
+        font-size: 16px;
+        margin-top: 10px; }
+    .modal-dialog .step3 .form-client__inside h2, .modal-dialog .step3 .form-client__inside p {
+      font-family: "OfficinaSerifStd-Bold", sans-serif; }
+    .modal-dialog .step3 .form-client__inside .planocontratado {
+      background: #eee;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px 10px 40px 10px;
+      min-height: 100px;
+      margin-top: 20px;
+      position: relative; }
+      .modal-dialog .step3 .form-client__inside .planocontratado .col-left,
+      .modal-dialog .step3 .form-client__inside .planocontratado .col-right {
+        float: left; }
+      .modal-dialog .step3 .form-client__inside .planocontratado p {
+        font-size: 12px;
+        margin-bottom: 10px;
+        color: #7e7e7e; }
+        .modal-dialog .step3 .form-client__inside .planocontratado p span {
+          color: #5f5f5f;
+          font-family: "OfficinaSerifStd-Bold", sans-serif;
+          font-size: 14px;
+          margin-right: 20px; }
+      .modal-dialog .step3 .form-client__inside .planocontratado .close {
+        background: #99cc33;
+        position: absolute;
+        left: calc(50% - 67px);
+        width: 135px;
+        border: none;
+        bottom: -15px;
+        height: 30px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        color: #fff; }
 
 /**
 * @section RESPONSIVE

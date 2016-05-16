@@ -1,14 +1,26 @@
-<div ng-class="{'selected': toggle.step3}" class="dados-cliente step3">
-  <h2>Parabéns!</h2>
-  <p>Sua linha CD de número {{ formcompra.ddd }} {{ formcompra.tel }} agora possui o plano Celular Direto Controle {{productSel.value}}</p>
-
-  <div ng-repeat="item in planocontratado">
-    <p><span>Código: </span> {{item.cod}}</p>
-    <p><span>Nome: </span>{{item.nome}}</p>
-    <p><span>Plano: </span>Celular Direto Controle {{item.plano}}</p>
-    <p><span>Vencimento: </span>Dia {{item.venc}} de cada mês</p>
-    <p><span>CPF: </span><span>{{item.cpf}}</span></p>
-    <p><span>Valor: </span>R$ 39,99 /mês</p>
-
+<div ng-class="{'selected': toggle.step3}" class="dados-cliente step3" style="display: block !important;">
+  <div class="form-client__inside">
+    <div class="col-sm-12">
+      <h2>Parabéns!</h2>
+      <p>Sua linha CD de número {{ formcompra.ddd }} {{ formcompra.tel }} agora possui o plano Celular Direto Controle {{productSel.value}}</p>
+      <p class="aviso">
+        Em instantes você receberá um e-mail do nosso Agente Oficial Celulardireto e um SMS confirmando a ativação do seu novo plano. Assim que receber a confirmação por SMS, você já poderá usufruir de todos os benefícios do seu novo plano.
+      </p>
+      <div class="planocontratado" ng-repeat="item in planocontratado">
+        <div class="col-left">
+          <p><span>Código: </span> {{item.cod}}</p>
+          <p><span>Nome: </span>{{item.nome}}</p>
+          <p><span>Plano: </span>Celular Direto Controle {{item.plano}}</p>
+          <p><span>Vencimento: </span>Dia {{item.venc}} de cada mês</p>
+        </div>
+        <div class="col-right">
+          <p><span>CPF: </span>{{item.cpf}}</p>
+          <p><span>Valor: </span>R$ 39,99 /mês</p>
+        </div>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">Ok</span>
+        </button>
+      </div>
+    </div>
   </div>
 </div>
