@@ -1,0 +1,36 @@
+<!-- planos -->
+<div class="destaques__planos produtos-container col-sm-12">
+  <div class="produtos-container__inside">
+    <div class="destaques__produto produto-item col-sm-4" ng-repeat="item in products">
+      <!-- product title -->
+      <h2 class="produto-item__titulo">
+        <span>{{ item.name }}</span>
+        <span>{{ item.typeproduct }}</span>
+      </h2>
+      <!-- product descriptions -->
+      <div class="produto-item__desc">
+        <ul>
+          <li ng-repeat="desc in item.descriptions">
+            <strong>{{ desc.label }}</strong>
+            <span>{{ desc.desc }}</span>
+          </li>
+
+        </ul>
+      </div>
+      <!-- product price -->
+      <div class="produto-item__button">
+        <div class="produto-item_price">
+          <p>
+            <span>R$</span>
+            <strong>{{ item.price.substr(0, item.price.indexOf(".")) }}</strong>
+            <span>,{{ item.price.substr(-2, item.price.indexOf(".")) }}</span>
+            <span>/mês</span>
+          </p>
+        </div>
+        <button class="destaques__btn btn btn-primary btn-lg btn-destaques" type="button" data-toggle="modal" data-target="#modalDestaques" ng-click="ativaModal()">
+          Contratar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

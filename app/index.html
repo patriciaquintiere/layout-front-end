@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" ng-app="project">
+<head>
+  <meta charset="UTF-8">
+  <title>Celular Direto</title>
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <!--build:css css/styles.min.css -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!-- endbuild -->
+  <!--build:js js/angular.min.js -->
+  <script src="../node_modules/angular/angular.js"></script>
+  <script src="/js/projectController.js"></script>
+  <!-- endbuild -->
+  <!--build:js js/main.min.js -->
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/jquery.inputmask/dist/jquery.inputmask.bundle.js"></script>
+  <script src="../node_modules/jquery-validation/dist/jquery.validate.js"></script>
+  <script src="js/bootstrap-modal.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/home.js"></script>
+  <!-- endbuild -->
+</head>
+<body ng-controller="projectController" class="ng-scope">
+  <!-- section banner -->
+  <div class="banner">
+    <!-- header -->
+    <div class="banner__header">
+      <div class="banner__wrapper">
+        <!-- top -->
+        <div class="banner__inside">
+          <!-- logo -->
+          <h1 class="banner__logo logo col-xs-12">
+            <a href="#"><img ng-src="{{ baseurl.basedir }}{{ baseurl.basedirImg }}logo-celulardireto.png" alt="Logo Celular Direto" /></a>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-- banner -->
+    <div class="banner__body">
+      <div class="banner__wrapper">
+        <!-- content banner -->
+        <div class="banner__inside">
+          <div class="banner__content col-xs-12" ng-include="'partials/banner.html'"><!-- include banner --></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section destaques -->
+  <section class="destaques">
+    <!-- destaques -->
+    <div class="destaques__wrapper">
+      <div class="destaques__inside">
+        <div class="destaques__header col-sm-12">
+          <h1>Conheça os planos</h1>
+          <p>Com o Controle você para um valor fixo todo mês e tem internet 4G, SMS e ligações ilimitadas com total controle de gastos.</p>
+        </div>
+      </div>
+      <!-- list products -->
+      <div class="destaques__inside" ng-include="'partials/products.html'"><!-- include list products --></div>
+    </div>
+    <!-- modal products -->
+    <div class="destaques__modal" ng-include="'partials/modal.html'"></div>
+
+  </section>
+  <!-- footer -->
+  <footer>
+    <div class="footer__wrapper">
+      <div class="footer__inside">
+        <p class="footer__logo col-sm-12">
+          <!-- logo -->
+          <img ng-src="{{ baseurl.basedir }}{{ baseurl.basedirImg }}logo-celulardireto-revendedor.png" alt="Logo Celular Direto Revendedor" />
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

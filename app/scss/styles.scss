@@ -1,0 +1,609 @@
+// reset
+@import "../../node_modules/bootstrap/scss/_normalize.scss";
+// variables
+@import "../../node_modules/bootstrap/scss/_variables.scss";
+// mixins
+@import "../../node_modules/bootstrap/scss/_mixins.scss";
+// modal
+@import "../../node_modules/bootstrap/scss/_modal.scss";
+// grid
+@import "../../node_modules/bootstrap/scss/_grid.scss";
+
+// variables
+@import 'imports/variables';
+// mixins
+@import 'mixins/mixins';
+// fonts
+@import 'imports/fonts.scss';
+
+/**
+* @section DEFAULT
+*/
+*{font-family: 'OfficinaSerifStd-Book', sans-serif;}
+ul{list-style: none;}
+
+/**
+* @section INPUTS
+*/
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="button"]
+textarea{
+  background: $gray-light;
+  border-radius: 5px;
+}
+
+/**
+* @section GERAL
+*/
+[class*="__wrapper"]{
+  @include make-container();
+  max-width: 960px;
+  margin: 0 auto;
+}
+[class*="__inside"]{
+  @include make-row();
+}
+[class*="col-"]{
+  @include make-col();
+}
+[disabled="disabled"]{
+  color: lighten($orange,0.4);
+  opacity: 0.8;
+}
+
+.modal-content{
+  [class*="step"]{display: none;}
+  .selected{display: block;}
+}
+section{
+  &:after {
+    display: table;
+    content: " ";
+    clear: both;
+    margin-top: 160px;
+  }
+}
+
+/**
+* @section HEADER
+*/
+.banner{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e57003+0,ffb517+52,e57003+100 */
+  background: #e57003; /* Old browsers */
+  background: -moz-linear-gradient(top,  #e57003 0%, #ffb517 52%, #e57003 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #e57003 0%,#ffb517 52%,#e57003 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #e57003 0%,#ffb517 52%,#e57003 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e57003', endColorstr='#e57003',GradientType=0 ); /* IE6-9 */
+  padding: 60px 0;
+
+  .banner__header{text-align: center;}
+  .banner__body{
+    .banner__text{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      justify-content: center;
+      max-width: 390px;
+      text-align: center;
+
+      .product-banner__plano{
+        min-width: 142px;
+
+        >*{display: block;}
+        strong{
+          color: $purple;
+          font-size: 65px;
+          font-family: $fontbold;
+          height: 70px;
+          text-transform: uppercase;
+          letter-spacing: -8px;
+        }
+        span{
+          color: $white;
+          font-size: 24px;
+          font-family: $fontbold;
+          margin: 5px 0;
+          text-transform: uppercase;
+        }
+        strong:last-child{
+          background-image: url("../images/backgrounds/sprite-celulardireto.png");
+          background-repeat: no-repeat;
+          background-position: 0 -100px;
+          height: 48px;
+          text-indent: -9999px;
+        }
+      }
+      .product-banner__vantagens{
+        padding-left: 35px;
+        width: 210px;
+
+        li{
+          &:before{
+            background-image: url("../images/backgrounds/sprite-celulardireto.png");
+            background-repeat: no-repeat;
+            background-position: 0 -146px;
+            content: '';
+            display: block;
+            height: 34px;
+            left: 0;
+            position: absolute;
+            width: 34px;
+          }
+          color: $purple;
+          font-size: 22px;
+          font-family: $fontbold;
+          line-height: 1.3rem;
+          padding-left: 43px;
+          position: relative;
+          margin-bottom: 10px;
+          text-align: left;
+          text-transform: uppercase;
+
+          > span{
+            color: $white;
+            display: block;
+            font-size: 14px;
+            text-transform: none;
+          }
+        }
+      }
+      .product-banner__preco{
+        background-image: url("../images/backgrounds/sprite-celulardireto.png");
+        background-repeat: no-repeat;
+        background-position: 0 3px;
+        color: $white;
+        display: block;
+        height: 103px;
+        font-family: $fontbold;
+        width: 218px;
+
+        p{
+          position: relative;
+          margin: 20px auto;
+          width: 160px;
+
+          > *{
+            display: table-cell;
+            vertical-align: top;
+          }
+          span{
+            font-size: 30px;
+            font-family: $fontbold;
+
+            &:last-child{
+              bottom: 0;
+              display: block;
+              font-size: 20px;
+              position: absolute;
+              right: 0;
+            }
+          }
+          strong{
+            font-size: 80px;
+            line-height: 65px;
+          }
+        }
+      }
+    }
+  }
+}
+/**
+* @section SECTION
+*/
+.destaques{
+  .destaques__wrapper{
+    position: relative;
+
+    &:before{
+      border-radius: 20px;
+      border: 1px solid $gray;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 108px;
+      width: 100%;
+    }
+  }
+  .destaques__header{
+    padding-top: 90px;
+
+    h1{
+      background: $white;
+      color: $purple;
+      margin: 0 auto;
+      font-size: 28px;
+      height: 40px;
+      text-align: center;
+      width: 250px;
+    }
+    p{
+      color: $gray-dark;
+      font-size: 18px;
+      padding: 0 10px;
+      margin: 0 auto;
+      text-align: center;
+      width: 510px;
+    }
+  }
+  .destaques__planos{
+    margin: 0 auto;
+    max-width: 756px;
+
+    .destaques__produto{
+      max-width: 235px;
+
+      > *{
+        text-align: center;
+      }
+
+
+
+    }
+  }
+}
+
+
+/**
+* @section LISTA PRODUTOS
+*/
+.produto-item__titulo{
+  background: $orange;
+  border-radius: 5px 5px 0 0;
+  margin: 20px 0 0 0;
+  padding: 5px;
+
+  span{
+    color: $purple;
+    display: block;
+    font-size: 18px;
+
+    &:first-child{line-height: 32px;}
+    &:last-child{
+      font-size: 60px;
+      height: 66px;
+      line-height: 66px;
+      text-transform: uppercase;
+    }
+  }
+}
+.produto-item__desc{
+  background: $gray-light;
+  padding-bottom: 40px;
+
+  ul{
+    margin: 0;
+    padding: 0;
+
+    li{
+      padding: 20px 35px 0 70px;
+      position: relative;
+      text-align: left;
+
+      &:before{
+        background-image: url("../images/backgrounds/sprite-celulardireto.png");
+        background-repeat: no-repeat;
+        background-position: 0 -146px;
+        content: '';
+        display: block;
+        height: 34px;
+        left: 30px;
+        position: absolute;
+        width: 34px;
+      }
+      strong{
+        color: $purple;
+        font-size: 22px;
+        font-family: "OfficinaSerifStd-Bold", sans-serif;
+        line-height: 1.3rem;
+        text-transform: uppercase;
+      }
+      span{
+        color: $gray-dark;
+        font-size: 14px;
+      }
+    }
+  }
+}
+.produto-item__button{
+  background: $purple;
+  border-radius: 0 0 5px 5px;
+  color: $white;
+
+  .produto-item_price{
+    position: relative;
+
+    &:before{
+      background: $purple;
+      content: '';
+      display: block;
+      position: absolute;
+      height: 40px;
+      left: calc(50% - 20px);
+      top: -20px;
+      transform: rotate(45deg);
+      width: 40px;
+      z-index: 2;
+    }
+    p{
+      padding: 12px 0 15px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      width: 115px;
+
+      > * {
+          display: table-cell;
+          vertical-align: top;
+      }
+      span{
+        font-size: 23px;
+        font-family: "OfficinaSerifStd-Bold", sans-serif;
+
+        &:last-child{
+          bottom: 12px;
+          display: block;
+          font-size: 14px;
+          position: absolute;
+          right: 0;
+          margin-right: 5px;
+        }
+      }
+      strong{
+        font-size: 46px;
+        font-family: "OfficinaSerifStd-Bold", sans-serif;
+        line-height: 40px;
+      }
+    }
+  }
+  .destaques__btn{
+    border: 0;
+    border-radius: 5px;
+    background: $green;
+    height: 31px;
+    line-height: 31px;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    position: relative;
+    z-index: 3;
+
+    &:before{
+      background-image: url("../images/backgrounds/sprite-celulardireto.png");
+      background-repeat: no-repeat;
+      background-position: 7px -186px;
+      content: '';
+      display: block;
+      position: absolute;
+      height: 18px;
+      left: 0px;
+      top: 7px;
+      width: 28px;
+      z-index: 4;
+    }
+  }
+}
+/**
+* @section FOOTER
+*/
+footer{
+  background: $purple;
+  color: $white;
+  text-align: center;
+
+  &:after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+}
+/**
+* @section MODAL
+*/
+.modal-dialog{
+  margin-top: 90px;
+  width: 700px;
+
+  .modal-title{
+    position: relative;
+    height: 120px;
+
+    span{
+      background: $purple;
+      border: 10px solid #fff;
+      border-radius: 90px;
+      display: block;
+      font-family: "OfficinaSerifStd-Bold", sans-serif;
+      height: 90px;
+      left: calc(50% - 46px);
+      width: 90px;
+      position: absolute;
+      top: -70px;
+      line-height: 90px;
+      color: #fff;
+      text-align: center;
+      font-size: 56px;
+      letter-spacing: -2px;
+    }
+    .form-client__titulo{
+      margin: 0 auto;
+
+      &.step1{
+        h2{
+          color: $purple;
+          font-size: 30px;
+          line-height: 35px;
+          text-align: center;
+        }
+      }
+      &.step2{
+        h2{
+          background-image: url("../images/backgrounds/sprite-celulardireto.png");
+          background-repeat: no-repeat;
+          background-position: 0px -236px;
+          color: $white;
+          height: 30px;
+          margin-top: 60px;
+          padding-left: 20px;
+          line-height: 40px;
+          font-size: 16px;
+        }
+
+      }
+
+    }
+  }
+  .modal-destaque__header,
+  .modal-footer{
+    border: 0;
+    font-size: 12px;
+  }
+  .modal-destaque__btn.close{
+    background: darken($gray, 20%);
+    border: 0;
+    color: $white;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 27px;
+    height: 26px;
+
+    span{
+      font-size: 29px;
+      line-height: 17px;
+      height: 25px;
+      display: block;
+    }
+  }
+  /** modal - lista de produtos */
+  .produtos-container__inside{
+    max-width: 500px;
+    margin: 0 auto;
+
+    .produtos-container__produto {
+      max-width: 143px;
+      width: 143px;
+      padding: 0;
+      margin: 0 10px;
+      border-radius: 10px;
+
+      &:hover{
+        border: 3px solid $purple;
+
+      };
+
+      .produto-item__titulo{
+        text-align: center;
+        margin: 0;
+
+        span{
+          font-size: 14px;
+          &:first-child{line-height: 22px;}
+          &:last-child{
+            font-size: 40px;
+            height: 50px;
+            line-height: 30px;
+
+            &:after{
+              content: 'De Internet';
+              display: block;
+              font-size: 14px;
+              line-height: 22px;
+              text-align: center;
+              text-transform: lowercase;
+            }
+          }
+        }
+      }
+      .produto-item__desc{
+        padding-bottom: 20px;
+        ul li{
+          padding: 5px 10px 0 40px;
+
+          &:before{
+            background-position: 3px -214px;
+            content: '';
+            display: block;
+            height: 24px;
+            left: 11px;
+            position: absolute;
+            width: 24px;
+            top: 20px;
+          }
+          span{
+            display: block;
+            font-size: 12px;
+          }
+          strong{
+            font-size: 12px;
+            line-height: 12px;
+          }
+        }
+      }
+      .produto-item__button{
+        padding-bottom: 10px;
+
+        .produto-item_price{
+          &:before{
+            top: 0;
+          }
+          p{
+            padding: 10px 0;
+            width: 90px;
+            span{
+              font-size: 16px;
+              &:last-child{
+                font-size: 12px;
+                margin-right: 10px;
+              }
+            }
+            strong{
+              font-size: 32px;
+              line-height: 28px;
+            }
+          }
+        }
+        .destaques__btn{
+          background: $orange;
+          cursor: pointer;
+          display: block;
+          margin: 0 auto;
+          width: 85px;
+
+          input{display: none;}
+        }
+      }
+    }
+
+  }
+  /** modal - form */
+  .step2 .form-client__inside{
+    display: block;
+    max-width: 440px;
+    margin: 0 auto 10px;
+
+    label{
+      color: $gray-dark;
+      display: block;
+    }
+    input{
+      background: $white;
+      border: 1px solid $gray;
+      height: 28px;
+      padding: 5px;
+      width: 100%;
+    }
+    .col{
+      padding: 0 10px;
+      width: 125px;
+    }
+    .tel #tel{width: 100px;}
+    #ddd{width: 20px;}
+  }
+}
+
+
+// responsive
+@import 'imports/responsive';

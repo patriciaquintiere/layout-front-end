@@ -1,0 +1,48 @@
+<!--FORM -->
+<form id="form" class="modal-destaque__modal-body form-client step2 col-sm-8" novalidate="novalidate" ng-class="{'selected': toggle.step2}">
+  <!-- nome -->
+  <div class="form-client__inside">
+    <div class="col-sm-12">
+      <label for="nome">Nome Completo</label>
+      <input type="text" name="nome" id="nome" ng-model="formcompra.nome" />
+    </div>
+  </div>
+  <!-- dados pessoais -->
+  <div class="form-client__inside">
+    <!-- nascimento -->
+    <div class="col">
+      <label for="nasc">Nascimento</label>
+      <input type="text" name="nasc" id="nasc" ng-model="formcompra.nasc" />
+    </div>
+    <!-- cpf -->
+    <div class="col">
+      <label for="cpf">CPF</label>
+      <input type="text" name="cpf" id="cpf" ng-model="formcompra.cpf"  />
+    </div>
+    <!-- telefone -->
+    <div class="tel col">
+      <label for="tel">Telefone de Contato</label>
+      <input type="text" name="ddd" id="ddd" ng-model="formcompra.ddd"  />
+      <input type="text" name="tel" id="tel" ng-model="formcompra.tel"  />
+    </div>
+  </div>
+  <!-- email -->
+  <div class="form-client__inside">
+    <div class="col-sm-12">
+      <label for="email">E-mail</label>
+      <input type="email" name="email" id="email" />
+    </div>
+  </div>
+  <!-- nome mae -->
+  <div class="form-client__inside">
+    <div class="col-sm-12">
+      <label for="filiacao">Nome Completo da Mãe</label>
+      <input type="text" name="filiacao" id="filiacao" />
+    </div>
+  </div>
+  <!-- button -->
+  <div class="form-client__inside">
+    <button class="form-client__button-next disabled" ng-click="enviar()">Continuar</button>
+  </div>
+
+</form>

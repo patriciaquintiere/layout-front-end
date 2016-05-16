@@ -1,0 +1,37 @@
+<div class="destaques__modal-destaque modal-destaque modal fade" id="modalDestaques" tabindex="-1" role="dialog" aria-labelledby="modalDestaquesLabel" aria-hidden="true">
+  <div class="modal-destaque__dialog modal-dialog" role="document">
+    <div class="modal-destaque__content modal-content">
+      <div class="modal-destaque__header modal-header">
+        <div class="modal-title" id="modalDestaquesLabel">
+          <span>CD</span>
+          <div class="form-client__inside">
+            <div class="form-client__titulo col-sm-8 col-xs-12 step1" ng-class="{'selected': toggle.step1}">
+              <h2>Escolha seu plano ideal com Internet Giga 4G e muitos mais!</h2>
+            </div>
+            <div class="form-client__titulo col-sm-8 col-xs-12 step2" ng-class="{'selected': toggle.step2}">
+              <h2>1. Dados Pessoais:</h2>
+            </div>
+          </div>
+
+        </div>
+        <button class="modal-destaque__btn close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-destaque__modal-body modal-body">
+        <!-- step produtcts -->
+        <div class="modal-body__products" ng-include="'partials/products-modal.html'"><!-- include products --></div>
+        <!-- step products -->
+        <div class="modal-body__products" ng-include="'partials/form-modal.html'"><!-- include form --></div>
+        <div class="modal-body__products" ng-include="'partials/dadosform-modal.html'"><!-- include dados do form --></div>
+      </div>
+
+      <!-- END FORM -->
+      <div class="modal-footer">
+        <p>
+          Powered by  <img ng-src="{{ baseurl.basedir }}{{ baseurl.basedirImg }}logo-celulardireto-horiz.png" alt="Logo Celular Direto" width="68" height="11" />
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

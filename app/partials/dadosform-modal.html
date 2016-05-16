@@ -1,0 +1,14 @@
+<div ng-class="{'selected': toggle.step3}" class="dados-cliente step3">
+  <h2>Parabéns!</h2>
+  <p>Sua linha CD de número {{ formcompra.ddd }} {{ formcompra.tel }} agora possui o plano Celular Direto Controle {{productSel.value}}</p>
+
+  <div ng-repeat="item in planocontratado">
+    <p><span>Código: </span> {{item.cod}}</p>
+    <p><span>Nome: </span>{{item.nome}}</p>
+    <p><span>Plano: </span>Celular Direto Controle {{item.plano}}</p>
+    <p><span>Vencimento: </span>Dia {{item.venc}} de cada mês</p>
+    <p><span>CPF: </span><span>{{item.cpf}}</span></p>
+    <p><span>Valor: </span>R$ 39,99 /mês</p>
+
+  </div>
+</div>

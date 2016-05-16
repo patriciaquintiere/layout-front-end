@@ -1,0 +1,27 @@
+/**
+* @section RESPONSIVE
+*/
+@media (max-device-width: 768px) {
+  .destaques__produto.produto-item{
+    display: block;
+    float: none;
+    flex: 100%;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+
+  ;
+  // width: 100% !important;
+}
+@media (min-device-width: 768px) and (max-device-width: 1023px) {
+  img{
+    max-width: 400px;
+  }
+}
+@media (max-device-width: 900px){
+
+}
+@media (max-device-width: 1023px){
+
+}
