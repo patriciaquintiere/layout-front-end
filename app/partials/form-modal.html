@@ -22,8 +22,15 @@
     <!-- telefone -->
     <div class="tel col">
       <label for="tel">Telefone de Contato</label>
-      <input type="text" name="ddd" id="ddd" ng-model="formcompra.ddd"  />
-      <input type="text" name="tel" id="tel" ng-model="formcompra.tel"  />
+      <div class="form-client__container">
+        <div class="ddd">
+          <input type="text" name="ddd" id="ddd" ng-model="formcompra.ddd"  />
+        </div>
+        <div class="tel">
+          <input type="text" name="tel" id="tel" ng-model="formcompra.tel"  />
+        </div>
+      </div>
+
     </div>
   </div>
   <!-- email -->
@@ -41,7 +48,7 @@
     </div>
   </div>
   <!-- button -->
-  <div class="form-client__inside">
+  <div class="form-client__inside container-button">
     <button class="form-client__button-next disabled" ng-click="enviar()">Continuar</button>
   </div>
 

@@ -1383,7 +1383,7 @@ footer {
         background-position: 0px -236px;
         color: #fff;
         height: 30px;
-        margin-top: 60px;
+        margin: 60px 20px 0;
         padding-left: 20px;
         line-height: 40px;
         font-size: 16px; }
@@ -1477,25 +1477,52 @@ footer {
           .modal-dialog .produtos-container__inside .produtos-container__produto .produto-item__button .destaques__btn input {
             display: none; }
   .modal-dialog .step2 .form-client__inside {
-    display: block;
     max-width: 440px;
-    margin: 0 auto 10px; }
+    margin: 0 auto 10px;
+    flex-wrap: nowrap; }
+    .modal-dialog .step2 .form-client__inside.container-button {
+      justify-content: flex-end; }
     .modal-dialog .step2 .form-client__inside label {
       color: #5f5f5f;
-      display: block; }
+      display: block;
+      font-size: 14px; }
+      .modal-dialog .step2 .form-client__inside label.error {
+        color: #ff9900; }
+    .modal-dialog .step2 .form-client__inside .form-client__container {
+      margin: 0 -10px;
+      width: 150px;
+      height: 42px; }
+    .modal-dialog .step2 .form-client__inside .ddd, .modal-dialog .step2 .form-client__inside .tel {
+      display: inline-block;
+      vertical-align: top;
+      float: left; }
+    .modal-dialog .step2 .form-client__inside .ddd {
+      width: 50px; }
+      .modal-dialog .step2 .form-client__inside .ddd #ddd {
+        margin-left: 10px;
+        width: 20px; }
+    .modal-dialog .step2 .form-client__inside .tel {
+      width: 100px; }
+      .modal-dialog .step2 .form-client__inside .tel #tel {
+        width: 90px; }
     .modal-dialog .step2 .form-client__inside input {
       background: #fff;
       border: 1px solid #dfdddd;
       height: 28px;
       padding: 5px;
-      width: 100%; }
+      width: calc(100% - 20px); }
     .modal-dialog .step2 .form-client__inside .col {
       padding: 0 10px;
       width: 125px; }
-    .modal-dialog .step2 .form-client__inside .tel #tel {
-      width: 100px; }
-    .modal-dialog .step2 .form-client__inside #ddd {
-      width: 20px; }
+    .modal-dialog .step2 .form-client__inside .form-client__button-next {
+      background: #ff9900;
+      border: 0;
+      border-radius: 5px;
+      color: #fff;
+      float: right;
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 5px 10px; }
 
 /**
 * @section RESPONSIVE
